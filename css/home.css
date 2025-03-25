@@ -1,0 +1,117 @@
+.main-content {
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-banner {
+    position: relative;
+}
+
+.img-banner img {
+    display: block;
+    opacity: 0.9;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.text-banner {
+    color: white;
+    font-family: "Valorant";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-banner h3 {
+    font-family: "League";
+    font-size: 1.85rem;
+}
+
+.text-banner h2 {
+    font-size: 6rem;
+}
+
+.play-button {
+    cursor: pointer;
+    margin-top: 1rem;
+    background-color: #FF4654;
+    display: flex;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.play-button:hover {
+    transition: all .2s ease-in-out;
+    background-color: #CD2E3A;
+    scale: 1.1;
+}
+
+.play-button p {
+    font-family: system-ui;
+    font-size: 1.85rem;
+    color: white;
+}
+
+.about {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.about img {
+    opacity: 0.9;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.about-content {
+    position: absolute;
+    /* background-image: linear-gradient(to top, black 90%, transparent); */
+    background-color: black;
+    bottom: 0;
+    opacity: 0.8;
+}
+
+.about-text {
+    color: white;
+    opacity: 1;
+    font-size: 1.2rem;
+    padding: 2.5rem;
+}
+
+.best-agent {
+    background-color: #0E1621;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-agent img {
+    height: 600px;
+}
+
+.agent-title {
+    color: white;
+    text-align: right;
+    width: 55%;
+}
+
+.agent-subtitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.agent-text-content {
+    font-size: 1.2rem;
+}

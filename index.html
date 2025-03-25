@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALORANT | HOME</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav class="container-navbar">
+        <div class="container-logo">
+            <img src="assets/logo-notext.png" alt="Palorant-Logo">
+            <p class="game-dev">GIOT GAMES</p>
+        </div>
+        <ul class="ul-navbar" id="navbar">
+            <li class="li-navbar hideOnMobile">
+                <a href="#">Home</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="agents.html">Agents</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="maps.html">Maps</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="news.html">News</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="report.html">Report</a>
+            </li>
+            <li class="li-navbar" id="sidebar-show" onclick=showSidebar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </li>
+        </ul>
+        <ul class="ul-navbar" id="sidebar">
+            <li class="li-navbar" id="sidebar-close" onclick=hideSidebar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+            </li>
+            <li class="li-navbar">
+                <a href="#">Home</a>
+            </li>
+            <li class="li-navbar">
+                <a href="agents.html">Agents</a>
+            </li>
+            <li class="li-navbar">
+                <a href="maps.html">Maps</a>
+            </li>
+            <li class="li-navbar">
+                <a href="news.html">News</a>
+            </li>
+            <li class="li-navbar">
+                <a href="report.html">Report</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- NAVBAR END -->
+    <!-- CONTENT START -->
+    <div class="main-content">
+        <div class="img-banner">
+            <img src="assets/VALORANT-BG.jpg" alt="Banner">
+            <div class="text-banner">
+                <h3>A 5v5 BASED TACTICAL SHOOTER</h3>
+                <h2>PALORANT</h2>
+                <div class="play-button">
+                    <p>PLAY FOR FREE</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <img src="assets/gameplay-original.png" alt="Palorant Gameplay">
+            <div class="about-content">
+                <p class="about-text">
+                    Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush
+                </p>
+            </div>
+        </div>
+        <div class="best-agent">
+            <img src="assets/omen-best.png" alt="Omen/Best Agent" class="agent-img">
+            <div class="agent-title">
+                <p class="agent-subtitle">BEST AGENT</p>
+                <p class="agent-text-content">
+                    A living nightmare, Omen takes full advantage of his shadowed physique and will not hesitate to eliminate his enemies using the forces of paranoia and fear. He is cynical in nature, which stems from him experiencing extreme pain as he was condemned to remain in the state that he is today. If there's one person who wants to know more about his mysterious circumstances, it's Omen himself - and quite desperately so.
+                    <br>
+                    <br>
+                    Omen wears gray armor, black pants, and a purple hooded cape. His arms are wrapped in bandages while never revealing his form underneath. His face cannot be seen under his hood, with only three bright blue slits being present instead.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="assets/footer.png" alt="footer">
+    </footer>
+    <!-- CONTENT END -->
+    <script src="./js/nav.js"></script>
+</body>
+</html>

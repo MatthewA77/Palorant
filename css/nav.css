@@ -1,0 +1,121 @@
+.container-navbar {
+    width: 100vw;
+    height:80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.ul-navbar {
+    font-family: "Valorant";
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.li-navbar a {
+    display: block;
+    padding: .5rem;
+    border-radius: 10%;
+    color: white;
+    text-decoration: none;
+    margin: auto;
+}
+
+.li-navbar a:hover {
+    transition: .1s ease-in-out;
+    color: #FF4654;
+    background-color: rgb(47, 47, 47);
+}
+
+.container-logo {
+    height: 80%;
+    width: 80%;
+    display: flex;
+}
+
+.container-logo img {
+    margin-left: 1rem;
+}
+
+.container-logo p {
+    font-family: "League";
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#sidebar {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+#sidebar-close a svg {
+    height: 36px;
+    width: 36px;
+}
+
+#sidebar-show {
+    display: none;
+}
+
+#sidebar-show a svg {
+    height: 36px;
+    width: 36px;
+}
+
+@media (max-width: 768px) {
+    #sidebar-show {
+        display: block;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    #sidebar li:first-child {
+        margin-top: 2rem;
+    }
+
+    #sidebar li a {
+        display: flex;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        font-family: "Valorant";
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    #sidebar li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    #sidebar {
+        width: 100vw;
+    }
+}

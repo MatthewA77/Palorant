@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Valorant";
+    src: url("../assets/fonts/Valorant/Valorant Font.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "League";
+    src: url("../assets/fonts/League/League.otf") format("opentype");
+}
+

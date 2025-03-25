@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALORANT | REPORT</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav class="container-navbar">
+        <div class="container-logo">
+            <img src="assets/logo-notext.png" alt="Palorant-Logo">
+            <p class="game-dev">GIOT GAMES</p>
+        </div>
+        <ul class="ul-navbar" id="navbar">
+            <li class="li-navbar hideOnMobile">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="agents.html">Agents</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="maps.html">Maps</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="news.html">News</a>
+            </li>
+            <li class="li-navbar hideOnMobile">
+                <a href="#">Report</a>
+            </li>
+            <li class="li-navbar" id="sidebar-show" onclick=showSidebar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </li>
+        </ul>
+        <ul class="ul-navbar" id="sidebar">
+            <li class="li-navbar" id="sidebar-close" onclick=hideSidebar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+            </li>
+            <li class="li-navbar">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="li-navbar">
+                <a href="agents.html">Agents</a>
+            </li>
+            <li class="li-navbar">
+                <a href="maps.html">Maps</a>
+            </li>
+            <li class="li-navbar">
+                <a href="news.html">News</a>
+            </li>
+            <li class="li-navbar">
+                <a href="#">Report</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- NAVBAR END -->
+    <!-- CONTENT START -->
+    <main>
+        <div class="report-container">
+            <h1>REPORT BUGS</h1>
+            <form class="report-content" id="report-content">
+                <div class="left">
+                    <label for="Username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="inpUser">
+                    <label for="Tagline">Tagline</label>
+                    <input type="text" placeholder="Enter your tagline" id="inpTag">
+                    <label for="Email">Email</label>
+                    <input type="email" placeholder="Enter your email address" id="inpEmail">
+                    <div class="server-select">
+                        <label for="Server">Server</label>
+                        <select name="server" id="inpServer">
+                            <option value="" selected disabled>Select a server</option>
+                            <option value="NA">NA</option>
+                            <option value="EU">EU</option>
+                            <option value="APAC">APAC</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="right">
+                    <label for="Bugs-Description">Bugs Description</label>
+                    <textarea name="bugs" id="inpBugs" cols="30" rows="10" placeholder="Enter description"></textarea>
+                    <div class="follow-up">
+                        <label for="Follow-Up-Emails">Do you want to get follow-up emails?</label>
+                        <input type="checkbox" name="follow-up" id="inpFollowUp">
+                        <!-- <label for="Yes">Yes</label>
+                        <input type="radio" name="Yes" id="radio-yes">
+                        <label for="No">No</label>
+                        <input type="radio" name="No" id="radio-no"> -->
+                    </div>
+                    <button type="submit" id="btnSubmit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div id="popup-notification" class="hidden">Successfully submitted!</div>
+    <footer>
+        <img src="assets/footer.png" alt="footer">
+    </footer>
+    <!-- CONTENT END -->
+    <script src="./js/validation.js"></script>
+    <script src="./js/nav.js"></script>
+</body>
+</html>
