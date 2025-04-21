@@ -7,6 +7,8 @@
 
 .img-banner {
     position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .img-banner img {
@@ -15,6 +17,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    max-height: 600px;
 }
 
 .text-banner {
@@ -28,6 +31,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    text-align: center;
 }
 
 .text-banner h3 {
@@ -62,43 +67,44 @@
 
 .about {
     display: flex;
-    position: relative;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    background-color: #0E1621;
 }
 
-.about img {
-    opacity: 0.9;
-    object-fit: cover;
+.about video {
     width: 100%;
-    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .about-content {
-    position: absolute;
-    /* background-image: linear-gradient(to top, black 90%, transparent); */
-    background-color: black;
-    bottom: 0;
-    opacity: 0.8;
+    position: relative; /* Changed from absolute to relative */
+    background-color: rgba(14, 22, 33, 0.5); /* Solid background instead of overlay */
+    width: 100%;
+    padding: 1rem 0;
 }
 
 .about-text {
     color: white;
-    opacity: 1;
     font-size: 1.2rem;
-    padding: 2.5rem;
+    padding: 1.5rem 2.5rem;
+    margin: 0;
 }
 
 .best-agent {
     background-color: #0E1621;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .best-agent img {
     height: 600px;
+    object-fit: contain;
+    max-width: 100%;
 }
 
 .agent-title {
@@ -110,8 +116,166 @@
 .agent-subtitle {
     font-size: 1.4rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .agent-text-content {
     font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+    .about {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .about video {
+        width: 60%;
+        height: 500px;
+    }
+    
+    .about-content {
+        width: 40%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+    }
+
+    .text-banner h2 {
+        font-size: 4rem;
+    }
+    
+    .text-banner h3 {
+        font-size: 1.5rem;
+    }
+    
+    .play-button p {
+        font-size: 1.5rem;
+    }
+    
+    .best-agent {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    
+    .best-agent img {
+        height: auto;
+        max-height: 500px;
+        width: auto;
+        margin-bottom: 2rem;
+    }
+    
+    .agent-title {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 1rem;
+        padding: 1.2rem 2rem;
+    }
+
+    .img-banner img {
+        height: 500px;
+    }
+
+    .text-banner h2 {
+        font-size: 3rem;
+    }
+    
+    .text-banner h3 {
+        font-size: 1.2rem;
+    }
+    
+    .play-button p {
+        font-size: 1.2rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .best-agent img {
+        max-height: 400px;
+        margin-bottom: 0;
+    }
+    
+    .agent-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .agent-text-content {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about video {
+        max-height: 300px;
+    }
+
+    .about-content {
+        height: 100%;
+        padding: 0;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .img-banner img {
+        height: 470px;
+    }
+    
+    .text-banner h2 {
+        font-size: 2rem;
+    }
+    
+    .text-banner h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .play-button {
+        padding: 0.7rem;
+    }
+    
+    .play-button p {
+        font-size: 1rem;
+    }
+    
+    .best-agent {
+        padding: 1.5rem 1rem;
+    }
+    
+    .agent-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .agent-text-content {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .about {
+        align-content: flex-start;
+    }
+
+    .about video {
+        max-height: 250px;
+    }
+
+    .about-content {
+        height: 100%;
+        padding: 0;
+    }
+
+    .about-text {
+        font-size: 0.7rem;
+    }
 }

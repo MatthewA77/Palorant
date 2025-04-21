@@ -7,60 +7,229 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/maps.css">
 </head>
 <body>
     <!-- NAVBAR START -->
-    <nav class="container-navbar">
-        <div class="container-logo">
-            <img src="assets/logo-notext.png" alt="Palorant-Logo">
-            <p class="game-dev">GIOT GAMES</p>
-        </div>
-        <ul class="ul-navbar" id="navbar">
-            <li class="li-navbar hideOnMobile">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="li-navbar hideOnMobile">
-                <a href="agents.html">Agents</a>
-            </li>
-            <li class="li-navbar hideOnMobile">
-                <a href="#">Maps</a>
-            </li>
-            <li class="li-navbar hideOnMobile">
-                <a href="news.html">News</a>
-            </li>
-            <li class="li-navbar hideOnMobile">
-                <a href="report.html">Report</a>
-            </li>
-            <li class="li-navbar" id="sidebar-show" onclick=showSidebar()>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
-            </li>
-        </ul>
-        <ul class="ul-navbar" id="sidebar" onclick=hideSidebar()>
-            <li class="li-navbar" id="sidebar-close">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
-            </li>
-            <li class="li-navbar">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="li-navbar">
-                <a href="agents.html">Agents</a>
-            </li>
-            <li class="li-navbar">
-                <a href="#">Maps</a>
-            </li>
-            <li class="li-navbar">
-                <a href="news.html">News</a>
-            </li>
-            <li class="li-navbar">
-                <a href="report.html">Report</a>
-            </li>
-        </ul>
-    </nav>
+    <div id="navbar-container"></div>
     <!-- NAVBAR END -->
+    
     <!-- CONTENT START -->
-    <br><br><br><br><br><br>
-    <h1>MAPS</h1>
+    <div class="maps-container">
+        <div class="maps-banner">
+            <h1>MAPS</h1>
+            <p>Explore the battlegrounds where your skills will be put to the test</p>
+        </div>
+        
+        <div class="maps-grid">
+            <!-- Map slider navigation -->
+            <div class="map-nav">
+                <button class="map-nav-btn active" data-map="haven">HAVEN</button>
+                <button class="map-nav-btn" data-map="bind">BIND</button>
+                <button class="map-nav-btn" data-map="split">SPLIT</button>
+                <button class="map-nav-btn" data-map="ascent">ASCENT</button>
+                <button class="map-nav-btn" data-map="icebox">ICEBOX</button>
+            </div>
+            
+            <!-- Map content panels -->
+            <div class="map-content-container">
+                <!-- Map 1: Haven -->
+                <div class="map-content active" id="haven-content">
+                    <div class="map-image">
+                        <!-- COMMENT: Replace with your Haven map image -->
+                        <img src="assets/maps/Haven/Haven-Thumbnail.webp" alt="Haven Map">
+                    </div>
+                    <div class="map-info">
+                        <h2>HAVEN</h2>
+                        <p class="map-location">Location: Thimphu, Bhutan</p>
+                        <div class="map-description">
+                            <p>Beneath a forgotten monastery, a clamour emerges from rival Agents clashing to control three sites. There's more territory to control, but defenders can use the extra real estate for aggressive pushes.</p>
+                            <div class="map-features">
+                                <h3>UNIQUE FEATURES</h3>
+                                <ul>
+                                    <li>The only map with three bomb sites (A, B, and C)</li>
+                                    <li>Multiple connecting pathways between sites</li>
+                                    <li>Long sightlines for snipers</li>
+                                    <li>Elevated positions for tactical advantage</li>
+                                </ul>
+                            </div>
+                            <div class="map-strategy">
+                                <h3>STRATEGY TIPS</h3>
+                                <p>Control of mid is crucial as it allows quick rotations between all three sites. Sentinels are particularly effective at holding the numerous entrances to sites, while Duelists can take advantage of the multiple entry points.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map 2: Bind -->
+                <div class="map-content" id="bind-content">
+                    <div class="map-image">
+                        <!-- COMMENT: Replace with your Bind map image -->
+                        <img src="assets/maps/Breeze/Breeze-Thumbnail.webp" alt="Bind Map">
+                    </div>
+                    <div class="map-info">
+                        <h2>BIND</h2>
+                        <p class="map-location">Location: Rabat, Morocco</p>
+                        <div class="map-description">
+                            <p>Two sites. No middle. You'll need to decide whether to push through the stacked defensive positions of the market or brave the open spaces of the hookah room. Both are risky, but the rewards are worth it.</p>
+                            <div class="map-features">
+                                <h3>UNIQUE FEATURES</h3>
+                                <ul>
+                                    <li>One-way teleporters to quickly move between areas</li>
+                                    <li>No mid section, forcing direct site approaches</li>
+                                    <li>Numerous corners and cubbies for defenders</li>
+                                    <li>Short and long-range engagement spots</li>
+                                </ul>
+                            </div>
+                            <div class="map-strategy">
+                                <h3>STRATEGY TIPS</h3>
+                                <p>The teleporters can be both a blessing and a curse, allowing quick rotations but making loud noises when used. Defenders should place utility near teleporter exits, while attackers should consider using the teleporter as a diversion tactic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map 3: Split -->
+                <div class="map-content" id="split-content">
+                    <div class="map-image">
+                        <!-- COMMENT: Replace with your Split map image -->
+                        <img src="assets/maps/Haven/Haven-4Crop.jpg" alt="Split Map">
+                    </div>
+                    <div class="map-info">
+                        <h2>SPLIT</h2>
+                        <p class="map-location">Location: Tokyo, Japan</p>
+                        <div class="map-description">
+                            <p>If you want to go far, you'll have to go up. A pair of sites split by an elevated middle allows for rapid rotation and flanking maneuvers. Each site is built with a point of elevation to watch over approaches.</p>
+                            <div class="map-features">
+                                <h3>UNIQUE FEATURES</h3>
+                                <ul>
+                                    <li>Vertical gameplay with ropes for quick movement</li>
+                                    <li>Elevated mid area with significant height advantage</li>
+                                    <li>Narrow chokepoints throughout the map</li>
+                                    <li>Multiple levels make for complex engagements</li>
+                                </ul>
+                            </div>
+                            <div class="map-strategy">
+                                <h3>STRATEGY TIPS</h3>
+                                <p>Mid control is essential on Split, as it provides the fastest rotation route. Defenders have a natural height advantage that attackers must overcome. Smoke and flash agents are valuable for pushing through the tight corridors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map 4: Ascent -->
+                <div class="map-content" id="ascent-content">
+                    <div class="map-image">
+                        <!-- COMMENT: Replace with your Ascent map image -->
+                        <img src="assets/maps/Ascent/-lz-ascent-06.jpg" alt="Ascent Map">
+                    </div>
+                    <div class="map-info">
+                        <h2>ASCENT</h2>
+                        <p class="map-location">Location: Venice, Italy</p>
+                        <div class="map-description">
+                            <p>An open playground for small wars of position and attrition divide two sites on Ascent. Each site can be fortified by irreversible bomb doors; once they're down, you'll have to destroy them or find another path.</p>
+                            <div class="map-features">
+                                <h3>UNIQUE FEATURES</h3>
+                                <ul>
+                                    <li>Closable metal doors at both bomb sites</li>
+                                    <li>Large, open middle courtyard</li>
+                                    <li>Numerous elevated positions and windows</li>
+                                    <li>Destructible doors that can be shot through</li>
+                                </ul>
+                            </div>
+                            <div class="map-strategy">
+                                <h3>STRATEGY TIPS</h3>
+                                <p>The middle courtyard is a high-risk, high-reward area that offers quick rotations. The metal doors can block off certain entrances but emit a loud sound when activated. Operators and other precision weapons excel in the open spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map 5: Icebox -->
+                <div class="map-content" id="icebox-content">
+                    <div class="map-image">
+                        <!-- COMMENT: Replace with your Icebox map image -->
+                        <img src="assets/maps/Sunset/Sunset-4.jpg" alt="Icebox Map">
+                    </div>
+                    <div class="map-info">
+                        <h2>ICEBOX</h2>
+                        <p class="map-location">Location: Bennett Island, Russia</p>
+                        <div class="map-description">
+                            <p>Your next battleground is a secret Kingdom excavation site overtaken by the arctic. The two plant sites protected by snow and metal require some horizontal finesse. Take the high ground or burrow through the map's many levels to freeze the enemy in their tracks.</p>
+                            <div class="map-features">
+                                <h3>UNIQUE FEATURES</h3>
+                                <ul>
+                                    <li>Ziplines for vertical movement</li>
+                                    <li>Numerous angles and elevated positions</li>
+                                    <li>Complex vertical gameplay across multiple levels</li>
+                                    <li>Tight corridors combined with open areas</li>
+                                </ul>
+                            </div>
+                            <div class="map-strategy">
+                                <h3>STRATEGY TIPS</h3>
+                                <p>The complexity of Icebox rewards creative movement and positioning. Vertical angles are particularly important, so watch above and below. The ziplines provide fast but risky rotations, and the tight angles make shotguns more viable than on other maps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="assets/logo-notext.png" alt="Palorant Logo" class="footer-logo">
+                <h3>GIOT GAMES</h3>
+                <p>A 5v5 character-based tactical shooter</p>
+            </div>
+            <div class="footer-section links-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="agents.html">Agents</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="report.html">Report Bug</a></li>
+                </ul>
+            </div>
+            <div class="footer-section community-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Tournaments</a></li>
+                    <li><a href="#">Players</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@giotgames.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GIOT Games. All rights reserved. PALORANT™ is a registered trademark.</p>
+        </div>
+    </footer>
     <!-- CONTENT END -->
     <script src="./js/nav.js"></script>
+    <script src="./js/maps.js"></script>
 </body>
 </html>

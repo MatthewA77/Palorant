@@ -2,7 +2,7 @@ main {
     background-image: url('../assets/Report-bg.jpg'); /* Adjust the path */
     background-size: cover; /* Make the image cover the whole section */
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
+    background-repeat: repeat; /* Prevent repeating */
     min-height: 100vh; /* Ensure it covers the full viewport height */
     display: flex; /* Helps center content if needed */
     justify-content: center; /* Center horizontally */

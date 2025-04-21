@@ -1,0 +1,212 @@
+/* CSS for Maps Page */
+.maps-container {
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0E1621;
+    min-height: 100vh;
+}
+
+.maps-banner {
+    width: 100%;
+    padding: 60px 0;
+    background-image: url('../assets/maps-banner.jpg'); /* COMMENT: Replace with your banner image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.maps-banner h1 {
+    font-family: "Valorant";
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.maps-banner p {
+    font-family: "League";
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.maps-grid {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.map-nav-btn {
+    padding: 10px 20px;
+    background-color: #192230;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Valorant";
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-nav-btn:hover {
+    background-color: #FF4654;
+}
+
+.map-nav-btn.active {
+    background-color: #FF4654;
+    box-shadow: 0 0 10px rgba(255, 70, 84, 0.5);
+}
+
+.map-content-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.map-content {
+    display: none;
+    flex-direction: column;
+}
+
+.map-content.active {
+    display: flex;
+}
+
+.map-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.map-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-info {
+    padding: 30px;
+    color: white;
+}
+
+.map-info h2 {
+    font-family: "Valorant";
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #FF4654;
+}
+
+.map-location {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.map-description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.map-description > p {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.map-features, .map-strategy {
+    flex: 1;
+    min-width: 300px;
+}
+
+.map-features h3, .map-strategy h3 {
+    font-family: "Valorant";
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #FF4654;
+}
+
+.map-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.map-features li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.map-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FF4654;
+}
+
+.map-strategy p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .maps-banner h1 {
+        font-size: 3rem;
+    }
+    
+    .maps-banner p {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+    
+    .map-image {
+        height: 300px;
+    }
+    
+    .map-info h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .maps-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .maps-banner p {
+        font-size: 1rem;
+    }
+    
+    .map-nav-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    .map-image {
+        height: 200px;
+    }
+    
+    .map-info {
+        padding: 20px;
+    }
+    
+    .map-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .map-location {
+        font-size: 1rem;
+    }
+}

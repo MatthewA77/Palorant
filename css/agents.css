@@ -1,0 +1,252 @@
+.agents-container {
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/agent-bg.jpg');
+    background-size: contain;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.agents-banner {
+    width: 100%;
+    padding: 60px 0;
+    background-image: url('../assets/agents-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.agents-banner h1 {
+    font-family: "Valorant";
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.agents-banner p {
+    font-family: "League";
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.agents-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.agent-card {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 70, 84, 0.3);
+}
+
+.agent-image {
+    width: 25%; /* Reduced width */
+    min-width: 120px; /* Further reduced minimum width */
+    max-width: 250px;
+    background-color: #192230;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.agent-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.agent-info {
+    width: 37.5%; /* Adjusted to maintain proportions */
+    padding: 20px;
+    color: white;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
+
+.agent-info h2 {
+    font-family: "Valorant";
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FF4654;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Break long words if needed */
+}
+
+.agent-role {
+    margin-bottom: 15px;
+}
+
+.role-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #FF4654;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.agent-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    word-wrap: break-word; /* Allow long words to break */
+    overflow-wrap: break-word;
+}
+
+.agent-abilities {
+    width: 37.5%; /* Adjusted to maintain proportions */
+    padding: 20px;
+    color: white;
+    overflow: hidden; /* Hide overflow */
+}
+
+.agent-abilities h3 {
+    font-family: "Valorant";
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #FF4654;
+}
+
+.agent-abilities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.agent-abilities li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+    word-wrap: break-word; /* Allow long words to break */
+    overflow-wrap: break-word;
+}
+
+.agent-abilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FF4654;
+}
+
+.agent-abilities span {
+    color: #FF4654;
+    font-weight: bold;
+}
+
+/* Even and odd cards styling for visual interest */
+.agent-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.agent-card:nth-child(even) .agent-info {
+    border-right: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Make specific agent cards stand out if desired */
+#omen {
+    border: 1px solid #6B5CBF;
+}
+
+/* Medium-sized screens adjustment */
+@media (max-width: 1100px) and (min-width: 993px) {
+    .agent-image {
+        width: 22%;
+    }
+    
+    .agent-info, .agent-abilities {
+        width: 39%; /* Distribute remaining space evenly */
+        font-size: 0.95rem;
+    }
+    
+    .agent-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .agent-abilities h3 {
+        font-size: 1.1rem;
+    }
+    
+    .agent-abilities li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .agent-card {
+        flex-direction: column !important;
+    }
+    
+    .agent-image {
+        width: 100%;
+        max-width: none;
+        min-width: auto;
+    }
+    
+    .agent-info, .agent-abilities {
+        width: 100%;
+        border: none !important;
+    }
+    
+    .agent-info {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .agents-container {
+        background-size: auto;
+    }
+    .agents-banner h1 {
+        font-size: 3rem;
+    }
+    
+    .agents-banner p {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+    
+    .agent-card {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .agents-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .agents-banner p {
+        font-size: 1rem;
+    }
+    
+    .agent-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .agent-abilities li {
+        font-size: 0.8rem;
+    }
+}
