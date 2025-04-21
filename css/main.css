@@ -13,7 +13,6 @@ body {
     font-family: system-ui;
 }
 
-/* Footer styles */
 .site-footer {
     background-color: #0E1621;
     color: #e0e0e0;
@@ -123,7 +122,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
     .footer-section {
         min-width: 150px;
@@ -162,7 +160,7 @@ body {
         text-align: center;
     }
     
-    .links-section, .community-section {
+    .community-section {
         text-align: center;
     }
 }
