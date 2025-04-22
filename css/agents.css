@@ -12,7 +12,7 @@
 .agents-banner {    
     width: 100%;
     padding: 60px 0;
-    background-image: url('assets/eps8-wpp.png');
+    background-image: url('../assets/eps8-wpp.png');
     background-size: cover;
     background-position: 0 20%;
     text-align: center;

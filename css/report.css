@@ -9,7 +9,7 @@ main {
 }
 
 .report-banner {
-    background-image: url('assets/report-banner.jpg');
+    background-image: url('../assets/report-banner.jpg');
     background-size: cover;
     background-position: 0 15%;
     width: 100%;
