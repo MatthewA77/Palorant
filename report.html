@@ -20,36 +20,33 @@
     <!-- NAVBAR END -->
     <!-- CONTENT START -->
     <main>
-        <div class="report-container">
+        <div class="report-banner">
             <h1>REPORT BUGS</h1>
+            <p>Help us improve the game by reporting any bugs you encounter</p>
+        </div>
+        <div class="report-container">
             <form class="report-content" id="report-content">
                 <div class="left">
-                    <label for="Username">Username</label>
+                    <label for="inpUser">Username</label>
                     <input type="text" placeholder="Enter your username" id="inpUser">
-                    <label for="Tagline">Tagline</label>
+                    <label for="inpTag">Tagline</label>
                     <input type="text" placeholder="Enter your tagline" id="inpTag">
-                    <label for="Email">Email</label>
+                    <label for="inpEmail">Email</label>
                     <input type="email" placeholder="Enter your email address" id="inpEmail">
-                    <div class="server-select">
-                        <label for="Server">Server</label>
-                        <select name="server" id="inpServer">
-                            <option value="" selected disabled>Select a server</option>
-                            <option value="NA">NA</option>
-                            <option value="EU">EU</option>
-                            <option value="APAC">APAC</option>
-                        </select>
-                    </div>
+                    <label for="inpServer">Server</label>
+                    <select name="server" id="inpServer">
+                        <option value="" selected disabled>Select a server</option>
+                        <option value="NA">NA</option>
+                        <option value="EU">EU</option>
+                        <option value="APAC">APAC</option>
+                    </select>
                 </div>
                 <div class="right">
-                    <label for="Bugs-Description">Bugs Description</label>
+                    <label for="inpBugs">Bugs Description</label>
                     <textarea name="bugs" id="inpBugs" cols="30" rows="10" placeholder="Enter description"></textarea>
                     <div class="follow-up">
-                        <label for="Follow-Up-Emails">Do you want to get follow-up emails?</label>
+                        <label for="inpFollowUp">Do you want to get follow-up emails?</label>
                         <input type="checkbox" name="follow-up" id="inpFollowUp">
-                        <!-- <label for="Yes">Yes</label>
-                        <input type="radio" name="Yes" id="radio-yes">
-                        <label for="No">No</label>
-                        <input type="radio" name="No" id="radio-no"> -->
                     </div>
                     <button type="submit" id="btnSubmit">Submit</button>
                 </div>

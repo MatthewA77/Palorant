@@ -3,19 +3,18 @@
     top: 80px;
     display: flex;
     flex-direction: column;
-    background-image: url('../assets/agent-bg.jpg');
-    background-size: contain;
+    background-color: #0E1621;
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
 }
 
-.agents-banner {
+.agents-banner {    
     width: 100%;
     padding: 60px 0;
-    background-image: url('../assets/agents-banner.jpg');
+    background-image: url('/assets/eps8-wpp.png');
     background-size: cover;
-    background-position: center;
+    background-position: 0 20%;
     text-align: center;
     color: white;
 }

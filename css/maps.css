@@ -1,4 +1,3 @@
-/* CSS for Maps Page */
 .maps-container {
     position: relative;
     top: 80px;
@@ -11,7 +10,7 @@
 .maps-banner {
     width: 100%;
     padding: 60px 0;
-    background-image: url('/assets/maps/Sunset/sabrina-echouafni-sunsetalley4.jpg');
+    background-image: url('/assets/maps/Sunset/sabrina-echouafni-sunsetalley4.jpg'); /* COMMENT: Replace with your banner image */
     background-size: cover;
     background-position: center;
     text-align: center;
