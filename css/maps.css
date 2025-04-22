@@ -5,6 +5,7 @@
     flex-direction: column;
     background-color: #0E1621;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .maps-banner {
