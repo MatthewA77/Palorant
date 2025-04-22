@@ -100,38 +100,22 @@ mapData.forEach(map => {
     i++;
 });
 
-// This JavaScript handles the map switching functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all map navigation buttons
     const mapButtons = document.querySelectorAll('.map-nav-btn');
     
-    // Get all map content sections
     const mapContents = document.querySelectorAll('.map-content');
     
-    // Add click event listener to each button
     mapButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Get the map ID from the data attribute
             const mapId = this.getAttribute('data-map');
-            
-            // Remove active class from all buttons
             mapButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
             this.classList.add('active');
-            
-            // Hide all map content sections
             mapContents.forEach(content => content.classList.remove('active'));
-            
-            // Show the corresponding map content
             document.getElementById(`${mapId}-content`).classList.add('active');
-            
-            // Scroll to the map content for better mobile experience
             document.getElementById(`${mapId}-content`).scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
     
-    // Add animation effect to map content on load
     mapContents.forEach(content => {
         if (content.classList.contains('active')) {
             setTimeout(() => {
@@ -140,10 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         }
     });
-    
-    // Function to switch maps with keyboard navigation
+
     function handleKeyboardNavigation(e) {
-        // Find the currently active button
         const activeButton = document.querySelector('.map-nav-btn.active');
         const buttons = Array.from(mapButtons);
         const currentIndex = buttons.indexOf(activeButton);

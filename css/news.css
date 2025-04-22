@@ -203,7 +203,6 @@
     }
 }
 
-/* Small desktop to large tablet */
 @media (max-width: 992px) {
     .news-featured {
         flex-direction: column;

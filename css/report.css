@@ -1,11 +1,11 @@
 main {
     background-color: #0E1621;
     display: flex;
-    flex-direction: column; /* Changed to column to stack banner and container */
-    justify-content: flex-start; /* Start from the top */
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    padding: 0; /* Remove padding as we'll control spacing elsewhere */
+    padding: 0;
 }
 
 .report-banner {
@@ -190,8 +190,8 @@ main {
 #popup-notification {
     position: fixed;
     top: 90px;
-    right: -300px; /* Start off-screen */
-    background-color: #4CAF50; /* Green */
+    right: -300px;
+    background-color: #4CAF50;
     color: white;
     padding: 15px 20px;
     border-radius: 5px;
@@ -202,16 +202,12 @@ main {
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-/* Slide-in animation */
 #popup-notification.show {
-    transform: translateX(-320px); /* Moves into view */
-    /* opacity: 1; */
+    transform: translateX(-320px);
 }
 
-/* Fade-out animation */
 #popup-notification.hide {
-    transform: translateX(320px); /* Moves off-screen */
-    /* opacity: 0; */
+    transform: translateX(320px);
 }
 
 .site-footer {

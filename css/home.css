@@ -79,8 +79,8 @@
 }
 
 .about-content {
-    position: relative; /* Changed from absolute to relative */
-    background-color: rgba(14, 22, 33, 0.5); /* Solid background instead of overlay */
+    position: relative;
+    background-color: rgba(14, 22, 33, 0.5);
     width: 100%;
     padding: 1rem 0;
 }

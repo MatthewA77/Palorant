@@ -102,7 +102,6 @@ newsData.forEach(news => {
     i++;
 });
 
-// This JavaScript adds functionality to the news page
 document.addEventListener('DOMContentLoaded', function() {
     // Group news articles by pages
     const newsArticlesPerPage = 7; // One featured article + 6 regular articles per page
@@ -140,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePaginationButtons(pageNum);
     }
     
-    // Function to update pagination buttons
     function updatePaginationButtons(currentPage) {
         const paginationButtons = document.querySelectorAll('.pagination-btn');
         
@@ -152,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.classList.add('active');
             }
             
-            // If the button is 'Next', adjust its href to point to the next page
+            // If the button is 'Next', adjust href to point to the next page address
             if (btn.textContent === 'Next') {
                 if (currentPage < totalPages) {
                     btn.href = `#page-${currentPage + 1}`;
@@ -165,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Set up pagination event listeners
     const paginationButtons = document.querySelectorAll('.pagination-btn');
     
     paginationButtons.forEach(button => {
@@ -175,12 +172,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let targetPage;
             
             if (this.textContent === 'Next') {
-                // Get the current active page
                 const currentPage = parseInt(document.querySelector('.pagination-btn.active').textContent);
                 if (currentPage < totalPages) {
                     targetPage = currentPage + 1;
                 } else {
-                    return; // Don't proceed if we're already on the last page
+                    return; // Return if already last page
                 }
             } else {
                 targetPage = parseInt(this.textContent);
