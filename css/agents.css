@@ -12,7 +12,7 @@
 .agents-banner {    
     width: 100%;
     padding: 60px 0;
-    background-image: url('/assets/eps8-wpp.png');
+    background-image: url('assets/eps8-wpp.png');
     background-size: cover;
     background-position: 0 20%;
     text-align: center;
@@ -58,14 +58,14 @@
 }
 
 .agent-image {
-    width: 25%; /* Reduced width */
-    min-width: 120px; /* Further reduced minimum width */
+    width: 25%;
+    min-width: 120px;
     max-width: 250px;
     background-color: #192230;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
 }
 
 .agent-image img {
@@ -75,12 +75,12 @@
 }
 
 .agent-info {
-    width: 37.5%; /* Adjusted to maintain proportions */
+    width: 37.5%;
     padding: 20px;
     color: white;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .agent-info h2 {
@@ -88,8 +88,8 @@
     font-size: 2rem;
     margin-bottom: 10px;
     color: #FF4654;
-    white-space: normal; /* Allow text wrapping */
-    word-break: break-word; /* Break long words if needed */
+    white-space: normal;
+    word-break: break-word;
 }
 
 .agent-role {
@@ -109,15 +109,15 @@
 .agent-description {
     font-size: 1rem;
     line-height: 1.5;
-    word-wrap: break-word; /* Allow long words to break */
+    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
 .agent-abilities {
-    width: 37.5%; /* Adjusted to maintain proportions */
+    width: 37.5%;
     padding: 20px;
     color: white;
-    overflow: hidden; /* Hide overflow */
+    overflow: hidden;
 }
 
 .agent-abilities h3 {
@@ -137,7 +137,7 @@
     padding-left: 20px;
     position: relative;
     font-size: 0.9rem;
-    word-wrap: break-word; /* Allow long words to break */
+    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
@@ -153,7 +153,6 @@
     font-weight: bold;
 }
 
-/* Even and odd cards styling for visual interest */
 .agent-card:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -163,19 +162,17 @@
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Make specific agent cards stand out if desired */
 #omen {
     border: 1px solid #6B5CBF;
 }
 
-/* Medium-sized screens adjustment */
 @media (max-width: 1100px) and (min-width: 993px) {
     .agent-image {
         width: 22%;
     }
     
     .agent-info, .agent-abilities {
-        width: 39%; /* Distribute remaining space evenly */
+        width: 39%;
         font-size: 0.95rem;
     }
     
@@ -192,7 +189,6 @@
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
     .agent-card {
         flex-direction: column !important;

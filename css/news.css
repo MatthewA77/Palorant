@@ -12,7 +12,7 @@
 .news-banner {
     width: 100%;
     padding: 60px 0;
-    background-image: url('/assets/yoru-wpp.jpg');
+    background-image: url('assets/yoru-wpp.jpg');
     background-size: cover;
     background-position: 0 25%;
     text-align: center;

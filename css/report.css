@@ -9,7 +9,7 @@ main {
 }
 
 .report-banner {
-    background-image: url('/assets/report-banner.jpg');
+    background-image: url('assets/report-banner.jpg');
     background-size: cover;
     background-position: 0 15%;
     width: 100%;
@@ -38,7 +38,6 @@ main {
     margin: 40px 100px;
     width: 90%;
     padding: 20px;
-    /* background-color: #0E1621; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;

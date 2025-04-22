@@ -1,7 +1,7 @@
 const agentsGrid = document.querySelector('.agents-grid');
 const agentsData = [
     {
-        image: "/assets/agents/Omen.png",
+        image: "assets/agents/Omen.png",
         name: "Omen",
         role: "CONTROLLER",
         desc: "A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to uncover where he might strike next.",
@@ -25,7 +25,7 @@ const agentsData = [
         ]
     },
     {
-        image: "/assets/agents/Jett.png",
+        image: "assets/agents/Jett.png",
         name: "Jett",
         role: "DUELIST",
         desc: "Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies up before they even know what hit them.",
@@ -49,7 +49,7 @@ const agentsData = [
         ]
     },
     {
-        image: "/assets/agents/Sage.webp",
+        image: "assets/agents/Sage.webp",
         name: "Sage",
         role: "SENTINEL",
         desc: "The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off forceful assaults, she provides a calm center to a hellish battlefield.",
@@ -73,7 +73,7 @@ const agentsData = [
         ]
     },
     {
-        image: "/assets/agents/Phoenix.webp",
+        image: "assets/agents/Phoenix.webp",
         name: "Phoenix",
         role: "DUELIST",
         desc: "Hailing from the UK, Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.",
@@ -97,7 +97,7 @@ const agentsData = [
         ]
     },
     {
-        image: "/assets/agents/Sova.webp",
+        image: "assets/agents/Sova.webp",
         name: "Sova",
         role: "INITIATOR",
         desc: "Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.",
@@ -121,7 +121,7 @@ const agentsData = [
         ]
     },
     {
-        image: "/assets/agents/Killjoy.webp",
+        image: "assets/agents/Killjoy.webp",
         name: "Killjoy",
         role: "SENTINEL",
         desc: "The genius of Germany, Killjoy secures the battlefield with an arsenal of devices. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.",
@@ -145,7 +145,7 @@ const agentsData = [
         ]
     },
     {
-        image: "/assets/agents/Breach.png",
+        image: "assets/agents/Breach.png",
         name: "Breach",
         role: "INITIATOR",
         desc: "Breach, the bionic Swede, fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.",

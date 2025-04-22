@@ -3,7 +3,7 @@ const mapData = [
     {
         id: "haven-content",
         mapName: "Haven",
-        image: "/assets/maps/Haven/Haven-6.jpg",
+        image: "assets/maps/Haven/Haven-6.jpg",
         loc: "Thimphu, Bhutan",
         desc: "Beneath a forgotten monastery, a clamour emerges from rival Agents clashing to control three sites. There's more territory to control, but defenders can use the extra real estate for aggressive pushes.",
         uniqueFeatures: [
@@ -17,7 +17,7 @@ const mapData = [
     {
         id: "bind-content",
         mapName: "Bind",
-        image: "/assets/maps/Bind/Bind_2.png",
+        image: "assets/maps/Bind/Bind_2.png",
         loc: "Rabat, Morocco",
         desc: "Two sites. No middle. You'll need to decide whether to push through the stacked defensive positions of the market or brave the open spaces of the hookah room. Both are risky, but the rewards are worth it.",
         uniqueFeatures: [
@@ -31,7 +31,7 @@ const mapData = [
     {
         id: "split-content",
         mapName: "Split",
-        image: "/assets/maps/Split/Split_1.jpg",
+        image: "assets/maps/Split/Split_1.jpg",
         loc: "Tokyo, Japan",
         desc: "If you want to go far, you'll have to go up. A pair of sites split by an elevated middle allows for rapid rotation and flanking maneuvers. Each site is built with a point of elevation to watch over approaches.",
         uniqueFeatures: [
@@ -45,7 +45,7 @@ const mapData = [
     {
         id: "ascent-content",
         mapName: "Ascent",
-        image: "/assets/maps/Ascent/-lz-ascent-06.jpg",
+        image: "assets/maps/Ascent/-lz-ascent-06.jpg",
         loc: "Venice, Italy",
         desc: "An open playground for small wars of position and attrition divide two sites on Ascent. Each site can be fortified by irreversible bomb doors; once they're down, you'll have to destroy them or find another path.",
         uniqueFeatures: [
@@ -59,7 +59,7 @@ const mapData = [
     {
         id: "icebox-content",
         mapName: "Icebox",
-        image: "/assets/maps/Icebox/Icebox-1.jpg",
+        image: "assets/maps/Icebox/Icebox-1.jpg",
         loc: "Bennett Island, Russia",
         desc: "Your next battleground is a secret Kingdom excavation site overtaken by the arctic. The two plant sites protected by snow and metal require some horizontal finesse. Take the high ground or burrow through the map's many levels to freeze the enemy in their tracks.",
         uniqueFeatures: [
