@@ -232,6 +232,10 @@ main {
         width: 100%;
     }
 
+    .left input, #inpServer, .right input, #inpBugs {
+        width: 100%;
+    }
+
     #btnSubmit {
         width: 100%;
         font-size: 18px;
