@@ -1,4 +1,3 @@
-
 onStart()
 function onStart(){
     let navbarContainer = document.getElementById("navbar-container");
@@ -54,18 +53,21 @@ function onStart(){
 
 function showSidebar() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.style.display = 'flex';
+    sidebar.classList.add('active');
 }
 
 function hideSidebar() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.style.display = 'none';
+    sidebar.classList.remove('active');
 }
 
 // get the width of the window and hide sidebar if the width is greater than 768px
 function updateSidebar() {
     const width = document.documentElement.clientWidth;
-    if (width > 768) hideSidebar();
+    const sidebar = document.getElementById("sidebar");
+    if (width > 768) {
+        sidebar.classList.remove('active');
+    }
 }
 
 // Check width on load
