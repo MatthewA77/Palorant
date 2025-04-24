@@ -112,18 +112,13 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             mapContents.forEach(content => content.classList.remove('active'));
             document.getElementById(`${mapId}-content`).classList.add('active');
-            document.getElementById(`${mapId}-content`).scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
-    
-    mapContents.forEach(content => {
-        if (content.classList.contains('active')) {
-            setTimeout(() => {
-                content.style.opacity = '1';
-                content.style.transform = 'translateY(0)';
-            }, 100);
-        }
-    });
+
+    const initActive = document.querySelector('.map-content.active');
+    if (initActive) {
+        initActive.classList.add('active');
+    }
 
     function handleKeyboardNavigation(e) {
         const activeButton = document.querySelector('.map-nav-btn.active');
