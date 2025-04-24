@@ -9,13 +9,6 @@ const newsData = [
         link: "#",
     },
     {
-        image: "assets/news/valorant_championship.jpg",
-        date: "April 2, 2025",
-        title: "GLOBAL CHAMPIONSHIP SERIES ANNOUNCED",
-        desc: "TGet ready for the biggest Palorant tournament of the year with a $2 million prize pool. Qualifiers begin next month.",
-        link: "#",
-    },
-    {
         image: "assets/news/vct_bundles.avif",
         date: "April 9, 2025",
         title: "VCT Ascended team bundles are now available",
@@ -23,10 +16,17 @@ const newsData = [
         link: "#",
     },
     {
-        image: "assets/news/waylay_new.jpg",
-        date: "March 25, 2025",
-        title: "NEW AGENT TEASER: WHO IS WAYLAY?",
-        desc: "A mysterious light emerges from the darkness. Get your first glimpse of our newest Duelist agent and their enigmatic abilities.",
+        image: "assets/news/valorant_championship.jpg",
+        date: "April 2, 2025",
+        title: "GLOBAL CHAMPIONSHIP SERIES ANNOUNCED",
+        desc: "TGet ready for the biggest Palorant tournament of the year with a $2 million prize pool. Qualifiers begin next month.",
+        link: "#",
+    },
+    {
+        image: "assets/news/april_fools.avif",
+        date: "April 1, 2025",
+        title: "April Fools: Smite 2 Reveal",
+        desc: "Yup it's happening. The best skin is back and better than ever.",
         link: "#",
     },
     {
@@ -37,10 +37,10 @@ const newsData = [
         link: "#",
     },
     {
-        image: "assets/news/april_fools.avif",
-        date: "April 1, 2025",
-        title: "April Fools: Smite 2 Reveal",
-        desc: "Yup it's happening. The best skin is back and better than ever.",
+        image: "assets/news/waylay_new.jpg",
+        date: "March 25, 2025",
+        title: "NEW AGENT TEASER: WHO IS WAYLAY?",
+        desc: "A mysterious light emerges from the darkness. Get your first glimpse of our newest Duelist agent and their enigmatic abilities.",
         link: "#",
     },
     {
