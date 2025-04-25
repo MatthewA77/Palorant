@@ -5,13 +5,13 @@
     flex-direction: column;
 }
 
-.img-banner {
+.video-banner {
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.img-banner img {
+.video-banner video {
     display: block;
     opacity: 0.9;
     object-fit: cover;
@@ -69,6 +69,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 2%;
     background-color: #0E1621;
 }
 
@@ -76,6 +77,7 @@
     width: 100%;
     max-height: 500px;
     object-fit: cover;
+    border-radius: 2%;
 }
 
 .about-content {
@@ -142,7 +144,7 @@
     }
 
     .text-banner h2 {
-        font-size: 4rem;
+        font-size: 4.8rem;
     }
     
     .text-banner h3 {
@@ -177,12 +179,12 @@
         padding: 1.2rem 2rem;
     }
 
-    .img-banner img {
+    .video-banner video {
         height: 500px;
     }
 
     .text-banner h2 {
-        font-size: 3rem;
+        font-size: 3.8rem;
     }
     
     .text-banner h3 {
@@ -213,6 +215,11 @@
 }
 
 @media (max-width: 480px) {
+    .video-banner video {
+        max-height: 100dvh;
+        height: calc(100dvh - 80px);
+    }
+
     .about video {
         max-height: 300px;
     }
@@ -226,13 +233,9 @@
         font-size: 0.8rem;
         padding: 1rem 1.5rem;
     }
-
-    .img-banner img {
-        height: 470px;
-    }
     
     .text-banner h2 {
-        font-size: 2rem;
+        font-size: 3.2rem;
     }
     
     .text-banner h3 {
@@ -262,6 +265,11 @@
 }
 
 @media (max-width: 400px) {
+    .video-banner img {
+        max-height: 100dvh;
+        height: calc(100dvh - 80px);
+    }
+
     .about {
         align-content: flex-start;
     }
