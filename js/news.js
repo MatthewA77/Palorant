@@ -1,4 +1,3 @@
-// Load news to the HTML page
 const newsGrid = document.querySelector('.news-grid');
 const newsData = [
     {
@@ -102,7 +101,6 @@ newsData.forEach(news => {
     i++;
 });
 
-// Create modal HTML structure and append to body
 const modalHTML = `
 <div id="news-modal" class="news-modal">
   <div class="modal-content">
@@ -126,7 +124,7 @@ const modalHTML = `
 
 document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-// Get modal elements
+// get modal elements
 const modal = document.getElementById('news-modal');
 const modalImage = modal.querySelector('.modal-image img');
 const modalDate = modal.querySelector('.modal-date');
@@ -134,17 +132,13 @@ const modalTitle = modal.querySelector('.modal-title');
 const modalDescription = modal.querySelector('.modal-description');
 const closeModalBtn = modal.querySelector('.close-modal');
 
-// Add extended content to the news data
 newsData.forEach(news => {
-  // Add full content property to each news item
   news.fullContent = `${news.desc} 
 
 ${getExtendedContent(news.title)}`;
 });
 
-// Function to generate extended content based on the news title
 function getExtendedContent(title) {
-  // This would ideally come from your backend, but for now we'll generate it based on the title
   const contentMap = {
     "EPISODE 6 ACT 2: REVELATIONS": `
     <h3>New Agent: Waylay</h3>
@@ -294,13 +288,12 @@ function getExtendedContent(title) {
 }
 
 function setupModalFunctionality() {
-  // Close modal when clicking X button
   closeModalBtn.addEventListener('click', function() {
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling again
+    document.body.style.overflow = 'auto';
   });
 
-  // Close modal when clicking outside the modal content
+  // close modal if click behind it
   window.addEventListener('click', function(event) {
     if (event.target === modal) {
       modal.style.display = 'none';
@@ -308,7 +301,7 @@ function setupModalFunctionality() {
     }
   });
 
-  // Close modal with ESC key
+  // esc key for closing modal
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape' && modal.style.display === 'block') {
       modal.style.display = 'none';
@@ -318,37 +311,35 @@ function setupModalFunctionality() {
 }
 
 function setupReadMoreButtons() {
-  // Find all read more buttons
   const readMoreButtons = document.querySelectorAll('.news-read-more');
   
   readMoreButtons.forEach((button, index) => {
     button.addEventListener('click', function(e) {
       e.preventDefault();
       
-      // Get the corresponding news data
+      // get the news data
       const newsItem = newsData[index];
       
-      // Populate modal with data
+      // insert modal with newsItem
       modalImage.src = newsItem.image;
       modalImage.alt = newsItem.title;
       modalDate.textContent = newsItem.date;
       modalTitle.textContent = newsItem.title;
       modalDescription.innerHTML = newsItem.fullContent;
       
-      // Show modal
+      // show
       modal.style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+      document.body.style.overflow = 'hidden'; // no scroll behind modal
     });
   });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Group news articles by pages
-    const newsArticlesPerPage = 7; // One featured article + 6 regular articles per page
+    const newsArticlesPerPage = 7;
     const allNewsArticles = Array.from(document.querySelectorAll('.news-card, .news-featured'));
     const totalPages = Math.ceil(allNewsArticles.length / newsArticlesPerPage);
     
-    // Set up news pages
+    // set up news pages
     const newsPages = {};
     for (let i = 0; i < totalPages; i++) {
         const pageNum = i + 1;
@@ -357,14 +348,13 @@ document.addEventListener('DOMContentLoaded', function() {
         newsPages[pageNum] = allNewsArticles.slice(startIndex, endIndex);
     }
     
-    // Function to show a specific page
     function showPage(pageNum) {
-        // Hide all news articles first
+        // hide all
         allNewsArticles.forEach(article => {
             article.style.display = 'none';
         });
         
-        // Show articles for the selected page
+        // show selected
         if (newsPages[pageNum]) {
             newsPages[pageNum].forEach(article => {
                 if (article.classList.contains('news-featured')) {
@@ -375,13 +365,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Update pagination buttons
         updatePaginationButtons(pageNum);
 
-        // Setup modal functionality
         setupModalFunctionality();
 
-        // Add event listeners to read more buttons after content is loaded
         setupReadMoreButtons();
     }
     
@@ -391,12 +378,10 @@ document.addEventListener('DOMContentLoaded', function() {
         paginationButtons.forEach(btn => {
             btn.classList.remove('active');
             
-            // If the button is a number, check if it matches the current page
             if (!isNaN(btn.textContent) && parseInt(btn.textContent) === currentPage) {
                 btn.classList.add('active');
             }
             
-            // If the button is 'Next', adjust href to point to the next page address
             if (btn.textContent === 'Next') {
                 if (currentPage < totalPages) {
                     btn.href = `#page-${currentPage + 1}`;
@@ -422,24 +407,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (currentPage < totalPages) {
                     targetPage = currentPage + 1;
                 } else {
-                    return; // Return if already last page
+                    return;
                 }
             } else {
                 targetPage = parseInt(this.textContent);
             }
             
-            // Show the target page
             showPage(targetPage);
             
-            // Scroll to the top of the news container
             document.querySelector('.news-container').scrollIntoView({ behavior: 'smooth' });
         });
     });
     
-    // Show the first page by default
+    // default
     showPage(1);
     
-    // Add animation to news cards when they come into view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -449,7 +431,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.1 });
     
-    // Observe each news card
     allNewsArticles.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
