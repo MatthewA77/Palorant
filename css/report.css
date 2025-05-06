@@ -110,6 +110,10 @@ main {
     gap: 10px;
 }
 
+.right ::placeholder {
+    font-family: system-ui;
+}
+
 .right textarea {
     resize: none;
     width: 90%;
