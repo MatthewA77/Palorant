@@ -104,7 +104,7 @@ newsData.forEach(news => {
 const modalHTML = `
 <div id="news-modal" class="news-modal">
   <div class="modal-content">
-    <span class="close-modal">&times;</span>
+    <span class="close-modal"></span>
     <div class="modal-image">
       <img src="" alt="News image">
     </div>
