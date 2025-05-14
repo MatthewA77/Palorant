@@ -69,6 +69,9 @@ function validEmail() {
     } else if (!email.value.endsWith('@gmail.com') && !email.value.endsWith('@binus.ac.id')) {
         showError(email, "Email must end with @gmail.com or @binus.ac.id");
         return false;
+    } else if(email.value.split("@").length - 1 > 1) {
+        showError(email, "Email must only have 1 '@' symbol");
+        return false;
     }
     showError(email, '');
     return true;
